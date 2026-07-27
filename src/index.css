@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .font-logo {
+    font-family: 'Lexend Giga', sans-serif;
+  }
+  .font-nav {
+    font-family: 'Poiret One', cursive;
+  }
+  .font-alumni {
+    font-family: 'Alumni Sans Pinstripe', sans-serif;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-color: #050708;
+  font-family: 'Alumni Sans Pinstripe', sans-serif;
+  color: white;
+  overflow-x: hidden;
+}
+
+/* Glitch animation for brand logo */
+@keyframes glitch {
+  0%, 90%, 100% { transform: translate(0); text-shadow: none; }
+  92% { transform: translate(-2px, 1px); text-shadow: 2px 0 #ff00ff, -2px 0 #00ffff; }
+  94% { transform: translate(2px, -1px); text-shadow: -2px 0 #ff00ff, 2px 0 #00ffff; }
+  96% { transform: translate(-1px, 2px); text-shadow: 1px 0 #ff00ff, -1px 0 #00ffff; }
+}
+
+.glitch-text {
+  animation: glitch 3s infinite;
+}
+
+/* Glass panel effect */
+.glass-panel-custom {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.glass-panel-custom:hover {
+  border-color: rgba(21, 191, 226, 0.5);
+  box-shadow: 0 0 30px rgba(21, 191, 226, 0.15);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* Navigation link underline effect */
+.nav-link-item {
+  font-family: 'Poiret One', cursive;
+  position: relative;
+}
+
+.nav-link-item::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: -2px;
+  left: 0;
+  background-color: #15BFE2;
+  transition: width 0.3s ease;
+}
+
+.nav-link-item:hover::after,
+.nav-link-item.active::after {
+  width: 100%;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(5, 7, 8, 0.8);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(21, 191, 226, 0.4);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(21, 191, 226, 0.8);
+}
+

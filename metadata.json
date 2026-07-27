@@ -1,0 +1,6 @@
+{
+  "name": "Tech Univers",
+  "description": "A high-tech academic portal for Team Univers with WebGL shader background, college library, project showcases, team directory, and AI support.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
